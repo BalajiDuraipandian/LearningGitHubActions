@@ -36,4 +36,4 @@ jobs:
         if [ -f ./${FOLDERNAME}/requirements.txt ]; then pip install -r ./${FOLDERNAME}/requirements.txt; fi
     - name: Run python application
       run: |
-        python ./day1/currentdateime.py
+        python ./${FOLDERNAME}/currentdateime.py

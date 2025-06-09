@@ -23,8 +23,8 @@ jobs:
        run: |
           echo "Card No: ${{github.event.inputs.cardno}}"
           echo "Card Type ${{github.event.inputs.cardtype}}"
-
-         #echo "$cardNo"
+          cardNo=${{github.event.inputs.cardno}}
+          echo "$cardNo"
          #len=${#cardNo}
          #echo "Length:$cardNo" 
          #if [ $len -lt 10 ]; then 

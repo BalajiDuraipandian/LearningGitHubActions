@@ -16,13 +16,15 @@ on:
        - amex
       default: master 
 jobs:
- Validate-card:
+ validate-card:
    runs-on: ubuntu-latest 
    steps: 
      - name: check the credit card number
        run: |
-         cardNo= "${{github.event.inputs.cardno}}"
-         echo "$cardNo"
+          echo "Card No: ${{github.event.inputs.cardno}}"
+          echo "Card Type ${{github.event.inputs.cardtype}}"
+
+         #echo "$cardNo"
          #len=${#cardNo}
          #echo "Length:$cardNo" 
          #if [ $len -lt 10 ]; then 

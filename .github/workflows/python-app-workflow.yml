@@ -8,17 +8,24 @@ on:
     branches: [ "main" ]
 env: 
   FOLDERNAME: 'day1' 
+  GITFOLDERNAME: ${{vars.FOLDERNAME}}
   
 permissions:
   contents: read
 
 jobs:
-  example_job: 
+  LocalVar_Job: 
     runs-on: ubuntu-latest 
     steps:
       - name: Use Global environment variable 
         run: echo $FOLDERNAME
-             echo ./${FOLDERNAME}/requirements.txt
+
+  GithubVar_Job: 
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Use GitHub Environment variable 
+        run: echo "Folder Name:$GITFOLDERNAME" 
+            
              
   build:
 

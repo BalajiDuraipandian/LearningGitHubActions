@@ -7,7 +7,7 @@ on:
   push:
     branches: [ "main" ]
 env: 
-  FOLDERNAME: 'Day1' 
+  FOLDERNAME: 'day1' 
   
 permissions:
   contents: read

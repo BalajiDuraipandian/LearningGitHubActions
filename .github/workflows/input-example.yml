@@ -38,10 +38,10 @@ jobs:
  shows-inputs:
    runs-on: ubuntu-latest
    steps:
-    - name: Checkout master
+    - name: Checkout main
       uses: actions/checkout@v4
       with:
-       ref: master
+       ref: main
        token: ${{secrets.GITHUBTOKENSECRET}} 
     - name: Print the input values
       run: |

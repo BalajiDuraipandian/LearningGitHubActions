@@ -17,7 +17,7 @@ on:
       default: master
 
 permissions:
-  contents: Write 
+  contents: write 
   
 jobs:
  validate-length:

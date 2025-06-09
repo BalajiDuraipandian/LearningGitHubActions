@@ -14,15 +14,11 @@ permissions:
   contents: read
 
 jobs:
-  LocalVar_Job: 
-    runs-on: ubuntu-latest 
+  combined: 
+    runs-on: ubuntu-latest
     steps:
       - name: Use Global environment variable 
         run: echo $FOLDERNAME
-
-  GithubVar_Job: 
-    runs-on: ubuntu-latest 
-    steps:
       - name: Use GitHub Environment variable 
         run: echo "Folder Name:$GITFOLDERNAME" 
             

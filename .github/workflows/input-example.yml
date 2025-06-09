@@ -26,12 +26,12 @@ jobs:
           cardNo=${{github.event.inputs.cardno}}
           echo "$cardNo"
           len=${#cardNo}
-          echo "Length:$cardNo" 
-         #if [ $len -lt 10 ]; then 
-           #echo "card no is invalid" 
-         #else 
-           #echo "card is valid" 
-         #fi 
+          echo "Length:$len" 
+          if [ $len -lt 10 ]; then 
+           echo "card no is invalid" 
+          else 
+           echo "card is valid" 
+          fi 
   
                  
  shows-inputs:

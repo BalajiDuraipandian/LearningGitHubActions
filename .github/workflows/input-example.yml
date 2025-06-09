@@ -62,6 +62,6 @@ jobs:
     - name: Commit and Push the file
       run: |
         git add cardlog.log
-        git commit -m "Add log file to master branch"
-        git push origin master
+        git commit -m "Add log file to main branch"
+        git push origin main
  

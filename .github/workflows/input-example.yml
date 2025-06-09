@@ -22,7 +22,8 @@ jobs:
      - name: check the credit card number
        run: |
          cardNo= "${{github.event.inputs.cardno}}"
-         len=${#cardNo}
+         echo "$cardNo"
+         #len=${#cardNo}
          #echo "Length:$cardNo" 
          #if [ $len -lt 10 ]; then 
            #echo "card no is invalid" 

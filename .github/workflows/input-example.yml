@@ -21,14 +21,15 @@ jobs:
    steps: 
      - name: check the credit card number
        run: |
-         Cardno= '${{github.event.inputs.cardno}}"
+         cardno= '${{github.event.inputs.cardno}}"
          len=${#cardNo}
-         echo "Length:#cardNo" 
+         echo "Length:$cardNo" 
          if [ $len -lt 10 ]; then 
            echo "card no is invalid" 
          else 
            echo "card is valid" 
          fi 
+  
                  
  shows-inputs:
    runs-on: ubuntu-latest

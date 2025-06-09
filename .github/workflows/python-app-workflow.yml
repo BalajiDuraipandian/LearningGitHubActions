@@ -27,4 +27,4 @@ jobs:
         if [ -f ./day1/requirements.txt ]; then pip install -r ./day1/requirements.txt; fi
     - name: Run python application
       run: |
-        python ./day1/currentdatetime.py
+        python ./day1/currentdateime.py

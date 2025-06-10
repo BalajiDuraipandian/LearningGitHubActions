@@ -2,7 +2,7 @@ name: Deploy Django App to EC2
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
     
 jobs:
   deploy:

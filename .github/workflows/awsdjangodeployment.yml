@@ -38,10 +38,12 @@ jobs:
 
       - name: Set environment variable for Docker Compose
         run: | 
-          ssh -i ec2_key.pem -o StrictHostKeyChecking=no ${{ secrets.EC2_HOST }} " 
-           echo "DJANGO_ENV=${{ github.event.inputs.env }}" >> $GITHUB_ENV"
+          #ssh -i ec2_key.pem -o StrictHostKeyChecking=no ${{ secrets.EC2_HOST }} " 
+           echo "DJANGO_ENV=${{ github.event.inputs.env }}" >> $GITHUB_ENV
+           echo ${DJANGO_ENV}
 
       - name: Run Docker Compose
         run: |
           ssh -i ec2_key.pem -o StrictHostKeyChecking=no ${{ secrets.EC2_HOST }} "
-          docker compose --env-file <(echo "DJANGO_ENV=${DJANGO_ENV}") up -d --build"
+          cd  ./trainingjun2025/employeeapidocker
+          sudo docker-compose --env-file=env.dev up -d --build"

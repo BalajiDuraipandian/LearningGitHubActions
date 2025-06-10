@@ -18,11 +18,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout master
+      - name: Checkout main
         uses: actions/checkout@v4
         with:
          token: ${{ secrets.GITHUBTOKEN }}
-         ref: master
+         ref: main
 
       - name: Setup SSH Key
         run: |

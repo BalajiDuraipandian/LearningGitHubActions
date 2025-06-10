@@ -6,7 +6,7 @@ on:
       env:
         description: 'Environment to deploy (dev, test, prod)'
         required: true
-        default: '.env.dev'
+        default: 'env.dev'
         type: choice
         options:
           - env.dev

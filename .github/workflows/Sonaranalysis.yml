@@ -1,11 +1,12 @@
 name: Sonar Cloud Code Analysis
 on:
- push:
-  branches:  
-   - main
- pull_request:
-  branches:
-   - main
+  # Manual triggers
+  workflow_dispatch:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  #push:
+    #branches: [ "main" ]
+  #pull_request:
+    #branches: [ "main" ]
    
    
 jobs:

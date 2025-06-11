@@ -1,5 +1,5 @@
 # .github/workflows/parallel-python-matrix.yml
-name: Parallel Python Matrix
+name: Parallel Dynamic Python Matrix
 on:
   push:
     branches: [ main ]  

@@ -1,8 +1,11 @@
 # .github/workflows/parallel-python-matrix.yml
 name: Parallel Dynamic Python Matrix
 on:
-  push:
-    branches: [ main ]  
+  # Manual triggers
+  workflow_dispatch:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  #push:
+    #branches: [ "main" ]
     #paths:
       #- ./day1/**
 jobs:

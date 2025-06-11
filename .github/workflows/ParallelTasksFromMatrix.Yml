@@ -1,5 +1,5 @@
 # .github/workflows/parallel-python-matrix.yml
-name: Parallel Python Matrix
+name: ParallelTasks Python Matrix
 
 on:
   push:

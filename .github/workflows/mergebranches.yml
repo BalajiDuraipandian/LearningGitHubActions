@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
         with:
          token: ${{ secrets.GITHUBTOKENSECRET }}
-         ref: master
+         ref: main
 
       - name: Configure Git
         run: |
@@ -29,11 +29,11 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUBTOKENSECRET }}
         run: |
-          git switch master
+          git switch main
           git merge origin/feature2 -m "Auto-merge feature2 into master" --allow-unrelated-histories
           #git add .
           #git commit -m "updated"
-          git rebase master
-          git push origin master
+          git rebase main
+          git push origin main
           #git branch -d origin/feature2
           #git push origin -d origin/feature2

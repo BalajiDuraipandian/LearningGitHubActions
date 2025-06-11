@@ -1,8 +1,8 @@
 # .github/workflows/parallel-python-matrix.yml
-name: ParallelTasks Python Matrix
+name: Parallel Python Matrix
 on:
   push:
-    branches: [ main ]   
+    branches: [ main ]  
     #paths:
       #- ./day1/**
 jobs:

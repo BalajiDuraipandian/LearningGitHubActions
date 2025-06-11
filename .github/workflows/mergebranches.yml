@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-         token: ${{ secrets.GITTOKEN }}
+         token: ${{ secrets.GITHUBTOKENSECRET }}
          ref: master
 
       - name: Configure Git
@@ -27,7 +27,7 @@ jobs:
 
       - name: Merge feature2 into main
         env:
-          GH_TOKEN: ${{ secrets.GITTOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUBTOKENSECRET }}
         run: |
           git switch master
           git merge origin/feature2 -m "Auto-merge feature2 into master" --allow-unrelated-histories

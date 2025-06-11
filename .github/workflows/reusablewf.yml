@@ -12,6 +12,10 @@ on:
       required: true
       type: string
       #default: 'master'
+  outputs:
+   message:
+    description: "Status of Card no validation"
+    value: ${{ jobs.return-data.outputs.message }}
 jobs:
   display:
    runs-on: ubuntu-latest
@@ -20,6 +24,8 @@ jobs:
     - run: echo "Credit card type ${{ inputs.cardtype }}"
   validate-length:
    runs-on: ubuntu-latest
+   outputs: 
+     message: ${{ steps.set-output.outputs.message }}
    steps:
    - name: Check Credit Card Number Of Digits and Push to Log file
      run: |
@@ -30,6 +36,23 @@ jobs:
        echo "Length:$len" >> cardlog.log
        if [ $len -lt 10 ]; then
          echo "Card No is invalid" >> cardlog.log
+         response="Card No is invalid"
        else
          echo "Card No is Valid" >> cardlog.log
-       fi
+         response="Card No is Valid"
+       fi   
+   - name: Show the contents from log file
+     run: cat cardlog.log
+   - name: Set Output Values
+     id: set-output
+     run: |
+       message=${response}
+       echo "$message" >> $GITHUB_OUTPUT
+   
+
+
+   
+       
+       
+
+   

@@ -12,7 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-         token: ${{ secrets.GITHUBTOKENSECRETS }}
+         token: ${{ secrets.GITHUBTOKENSECRET }}
          ref: master
 
       - name: Set up Python
